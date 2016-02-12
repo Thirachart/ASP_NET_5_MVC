@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net451": {
+      "wrappedProject": "../../BLL/BLL.csproj",
+      "bin": {
+        "assembly": "../../BLL/obj/{configuration}/BLL.dll",
+        "pdb": "../../BLL/obj/{configuration}/BLL.pdb"
+      }
+    }
+  }
+}

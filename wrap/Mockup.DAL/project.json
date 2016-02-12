@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net451": {
+      "wrappedProject": "../../Mockup.DAL/Mockup.DAL.csproj",
+      "bin": {
+        "assembly": "../../Mockup.DAL/obj/{configuration}/Mockup.DAL.dll",
+        "pdb": "../../Mockup.DAL/obj/{configuration}/Mockup.DAL.pdb"
+      },
+      "dependencies": {
+        "BLL": "1.0.0-*",
+        "DAL": "1.0.0-*"
+      }
+    }
+  }
+}
