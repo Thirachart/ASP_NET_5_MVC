@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
+using BLL;
 
 namespace MVC.Controllers
 {
@@ -13,11 +14,18 @@ namespace MVC.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult About(Order o)
+        {
+            o.OrderID = 2222;
+            return View(o);
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-
-            return View();
+            Order o = new Order() { OrderID = 1111 };
+            return View(o);
         }
 
         public IActionResult Contact()

@@ -39,7 +39,7 @@ namespace BLL.TEST
             IOrderRepository rep = new OrderRepository();
             rep.SaveOrder(new Order() { OrderID = 11 });
             Assert.IsNotNull(rep.GetOrder(11), "GetOrder can't find data");
-            Assert.AreEqual(1, rep.GetOrder(11).OrderID, "GetOrder return wrong value");
+            Assert.AreEqual(11, rep.GetOrder(11).OrderID, "GetOrder return wrong value");
         }
     }
 }

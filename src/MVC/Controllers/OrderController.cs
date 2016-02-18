@@ -10,15 +10,15 @@ namespace MVC.Controllers
 {
     public class OrderController : Controller
     {
-        public OrderController()
+        IOrderRepository orderRepository;
+        public OrderController(IOrderRepository rep)
         {
-
+            orderRepository = rep;
         }
 
         public IActionResult Index()
         {
-            IOrderRepository rep = new OrderRepository();
-            return View(rep.GetOrders());
+            return View(orderRepository.GetOrders());
         }
     }
 }
